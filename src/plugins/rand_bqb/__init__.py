@@ -24,6 +24,7 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
 @group_bqb.got("key",prompt="请输入<断章取义>的关键词")
 async def handle_key(bot: Bot, event: Event, state: T_State):
     key = state["key"]
+    print(key)
     key_image_url = await get_image(key)
     await group_bqb.finish(MessageSegment.image(key_image_url))
 
