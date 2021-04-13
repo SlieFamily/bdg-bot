@@ -6,7 +6,7 @@ from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 from nonebot.adapters.cqhttp import Message,MessageSegment
 
-from .data_source import Get_image
+from .data_source import get_image
 
 # 默认配置
 global_config = nonebot.get_driver().config
@@ -24,10 +24,6 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
 @group_bqb.got("key",prompt="请输入<断章取义>的关键词")
 async def handle_key(bot: Bot, event: Event, state: T_State):
     key = state["key"]
-    # 此处插入关键词匹配代码
-    # if key not in ["上海", "北京"]:
-        # await group_bqb.reject("你想查询的城市暂不支持，请重新输入！")
-    
     key_image_url = await get_image(key)
     await group_bqb.finish(MessageSegment.image(key_image_url))
 
