@@ -13,7 +13,7 @@ global_config = nonebot.get_driver().config
 plugin_config = Config(**global_config.dict())
 
 # 响应命令
-group_bqb = on_command("group_bqb", aliases=set(['*群表情包', '*yj语录', '*经典语录', '*断章取义']), priority=2)
+group_bqb = on_command("group_bqb", aliases=set(['*/', '*断章取义']), priority=2)
 
 @group_bqb.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
@@ -21,7 +21,7 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     if args:
         state["key"] = args  # 若有则直接赋值
 
-@group_bqb.got("key",prompt="请输入<断章取义>的关键词")
+@group_bqb.got("key",prompt="请输入的关键词")
 async def handle_key(bot: Bot, event: Event, state: T_State):
     key = state["key"]
     print(key)
