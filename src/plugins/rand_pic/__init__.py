@@ -12,7 +12,7 @@ from nonebot.log import logger
 global_config = nonebot.get_driver().config
 plugin_config = Config(**global_config.dict())
 
-setu = on_command("setu", aliases=set(['涩图', '色图', '来张色图', '来张涩图']), rule=to_me(), priority=1)
+setu = on_command("setu", aliases=set(['涩图', '色图', '来张色图', '来张涩图']), priority=1)
 
 @setu.handle()
 async def handle(bot: Bot, event: Event, state: T_State):
