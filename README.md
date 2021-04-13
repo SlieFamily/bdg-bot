@@ -7,4 +7,5 @@
 3. run your bot using `nb run` .
 
 ## 机器人昵称
-NICKNAME = ["bdg","爆点哥","爆点机器人"]
+1. "爆点哥"
+2. "爆点机器人"
