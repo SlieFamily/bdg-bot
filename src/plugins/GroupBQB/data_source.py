@@ -9,11 +9,11 @@ async def get_image(key:str):
     # 调取表情包链接api
     # async with httpx.AsyncClient() as client:
     #     resp = await client.get('https://my-json-server.typicode.com/sliefamily/bdg-bot/db')
-    #     json_data = resp.json()['detail']
+    #     json_data = resp.json()['bqb']
 
     # 读取本地json文件
     with open('/home/bdg-bot/db.json','r',encoding='utf8')as fp:
-        json_data = json.load(fp)['detail']
+        json_data = json.load(fp)['bqb']
         
     for i in range(0,len(json_data)):
         if json_data[i]["key"] == key:
