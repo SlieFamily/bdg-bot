@@ -1,21 +1,21 @@
 import httpx
 import json
-from random import choices
 
-async def get_words():
+async def get_image(key:str):
     '''
-    提取words的url
+    根据关键词提取image的url
     '''
     # 推荐使用此方法
-    # 调取爆点语录的链接api
+    # 调取表情包链接api
     # async with httpx.AsyncClient() as client:
     #     resp = await client.get('https://my-json-server.typicode.com/sliefamily/bdg-bot/db')
-    #     json_data = resp.json()['words']
-    #     return choices(json_data,k-1)[0]
-    # return None
+    #     json_data = resp.json()['detail']
 
     # 读取本地json文件
     with open('/home/bdg-bot/db.json','r',encoding='utf8')as fp:
-        json_data = json.load(fp)['words']
-        return choices(json_data, k=1)[0]
+        json_data = json.load(fp)['detail']
+        
+    for i in range(0,len(json_data)):
+        if json_data[i]["key"] == key:
+            return json_data[i]["url"]
     return None
