@@ -1,6 +1,6 @@
 # 爆点机器人|bdg-bot
 
-## 快速开始|How to start
+## 快速开始
 
 1. 参考`go-cqhttp`项目文档，提前配置好反向ws客户端
 2. 参考`nonebot2`项目文档，提前配置好`.env`相关文件
