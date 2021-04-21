@@ -21,7 +21,7 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     if args:
         state["key"] = args  # 若有则直接赋值
 
-@group_bqb.got("key",prompt="请输入的关键词")
+@group_bqb.got("key",prompt="请输入关键词")
 async def handle_key(bot: Bot, event: Event, state: T_State):
     key = state["key"]
     print(key)
