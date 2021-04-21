@@ -20,8 +20,8 @@ async def handle(bot: Bot, event: Event, state: T_State):
         resp = await client.get('https://api.mtyqx.cn/api/random.php?return=json')
         logger.debug(resp.json())
         imgurl = resp.json()['imgurl']
-        cqimg = f"[CQ:image,file=1.{imgurl.split('.')[1]},url={imgurl}]"
-        await setu.send(Message(cqimg))
+        # cqimg = f"[CQ:image,file=1.{imgurl.split('.')[1]},url={imgurl}]"
+        await setu.send(MessageSegment.img(imgurl))
 
 
 
