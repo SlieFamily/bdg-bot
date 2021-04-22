@@ -10,12 +10,12 @@ async def get_words():
     # 调取爆点语录的链接api
     # async with httpx.AsyncClient() as client:
     #     resp = await client.get('https://my-json-server.typicode.com/sliefamily/bdg-bot/db')
-    #     json_data = resp.json()['words']
+    #     json_data = resp.json()['BDwords']
     #     return choices(json_data,k-1)[0]
     # return None
 
     # 读取本地json文件
     with open('/home/bdg-bot/db.json','r',encoding='utf8')as fp:
-        json_data = json.load(fp)['words']
+        json_data = json.load(fp)['BDwords']
         return choices(json_data, k=1)[0]
     return None
