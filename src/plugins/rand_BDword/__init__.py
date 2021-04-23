@@ -14,6 +14,7 @@ plugin_config = Config(**global_config.dict())
 
 # 响应命令
 BDwords = on_command("BDwords", aliases=set(['*/爆点语录','*/BD语录','*/bd语录']), priority=2)
+Addwords = on_regex("*/add []")
 
 @BDwords.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
