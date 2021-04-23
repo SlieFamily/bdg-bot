@@ -2,20 +2,39 @@ import httpx
 import json
 from random import choices
 
-async def get_words():
+async def get_json():
     '''
-    提取words的url
+    提取words的json内容
     '''
     # 推荐使用此方法
     # 调取爆点语录的链接api
     # async with httpx.AsyncClient() as client:
     #     resp = await client.get('https://my-json-server.typicode.com/sliefamily/bdg-bot/db')
-    #     json_data = resp.json()['BDwords']
-    #     return choices(json_data,k-1)[0]
-    # return None
+    #     json_data = resp.json()
 
-    # 读取本地json文件
+    # 这里是直接读取本地文件的方法
     with open('/home/bdg-bot/db.json','r',encoding='utf8')as fp:
-        json_data = json.load(fp)['BDwords']
-        return choices(json_data, k=1)[0]
+        json_data = json.load(fp)
+        return json_data
     return None
+
+async def get_words():
+    '''
+    提取words
+    '''
+    try:
+        words = get_json()['BDwords']
+        return choices(words,k=1)[0]
+    except:
+        return "发送失败，数据库维护中……"
+
+async def IsAdded(words):
+    '''
+    追加爆点语录
+    '''
+    json_data = get_json()
+    json_data['BDwords'].append(words)
+    with open("db.json", "w", encoding="utf8") as fp:
+        json.dump(json_data, fp,ensure_ascii=False)
+        return True
+    return False
