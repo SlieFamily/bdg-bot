@@ -2,7 +2,7 @@ import httpx
 import json
 from random import choices
 
-async def get_json():
+def get_json():
     '''
     提取words的json内容
     '''
@@ -28,12 +28,12 @@ async def get_words():
     except:
         return "发送失败，数据库维护中……"
 
-async def IsAdded(words):
+def IsAdded(words):
     '''
     追加爆点语录
     '''
     json_data = get_json()
-    json_data['BDwords'].append(words)
+    json_data['BDwords'].append(words[0])
     with open("/home/bdg-bot/db.json", "w", encoding="utf8") as fp:
         json.dump(json_data, fp,ensure_ascii=False)
         print
