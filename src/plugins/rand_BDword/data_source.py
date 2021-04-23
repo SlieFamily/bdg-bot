@@ -34,7 +34,8 @@ async def IsAdded(words):
     '''
     json_data = get_json()
     json_data['BDwords'].append(words)
-    with open("db.json", "w", encoding="utf8") as fp:
+    with open("/home/bdg-bot/db.json", "w", encoding="utf8") as fp:
         json.dump(json_data, fp,ensure_ascii=False)
+        print
         return True
     return False
