@@ -13,7 +13,7 @@ global_config = nonebot.get_driver().config
 plugin_config = Config(**global_config.dict())
 
 # 响应命令
-group_bqb = on_command("group_bqb", aliases=set(['*/', '*断章取义']), priority=2)
+group_bqb = on_command("group_bqb", aliases=set(['*断章取义']), priority=2)
 
 @group_bqb.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
