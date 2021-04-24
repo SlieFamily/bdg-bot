@@ -4,8 +4,8 @@ from .config import Config
 from nonebot import on_command,on_regex,on_notice
 from nonebot.rule import to_me
 from nonebot.typing import T_State
-from nonebot.adapters import Bot, Event,GroupIncreaseNoticeEvent
-from nonebot.adapters.cqhttp import Message,MessageSegment
+from nonebot.adapters import Bot, Event
+from nonebot.adapters.cqhttp import Message,MessageSegment,GroupIncreaseNoticeEvent
 
 from .data_source import get_words,IsAdded,IsDel
 
@@ -43,6 +43,6 @@ async def handle_first_receive(bot: Bot,event: Event, state: T_State):
 @welcom.handle()
 async def handle_first_receive(bot: Bot,event: GroupIncreaseNoticeEvent, state: T_State):
     user = event.get_user_id()
-    at_ = "[cQ:at,qq=[}]".format(user)
+    at_ = "[CQ:at,qq={}]".format(user)
     msg = at_+'新人，想学爆点吗？'
     await welcom.finish(Message(msg))
