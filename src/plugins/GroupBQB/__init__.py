@@ -1,6 +1,7 @@
 import nonebot
+import re
 from .config import Config
-from nonebot import on_command
+from nonebot import on_command,on_regex
 from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
@@ -13,17 +14,11 @@ global_config = nonebot.get_driver().config
 plugin_config = Config(**global_config.dict())
 
 # 响应命令
-group_bqb = on_command("group_bqb", aliases=set(['*断章取义']), priority=2)
+group_bqb = on_regex("([\S]+).jpg")
 
 @group_bqb.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
-    args = str(event.get_message()).strip()  # 获取指令后的key
-    if args:
-        state["key"] = args  # 若有则直接赋值
-
-@group_bqb.got("key",prompt="请输入关键词")
-async def handle_key(bot: Bot, event: Event, state: T_State):
-    key = state["key"]
+    key = re.findall("([\S]+).jpg",str(event.get_message()))[0]
     print(key)
     key_image_url = await get_image(key)
     await group_bqb.finish(MessageSegment.image(key_image_url))
