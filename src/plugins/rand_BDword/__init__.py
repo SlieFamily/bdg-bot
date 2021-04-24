@@ -35,8 +35,9 @@ async def handle_first_receive(bot: Bot,event: Event, state: T_State):
 
 @Delwords.handle()
 async def handle_first_receive(bot: Bot,event: Event, state: T_State):
-    if IsDel():
-        await Delwords.finish(Message("语录删除成功，哭唧唧……"))
+    del_msg = IsDel()
+    if del_msg:
+        await Delwords.finish(Message("已将语录：\n-------\n"+del_msg+"\n-------\n删除！"))
     else:
         await Delwords.finish(Message("删除失败了，嗯嘿嘿"))
 
