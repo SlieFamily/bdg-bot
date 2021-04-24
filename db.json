@@ -1,25 +1,61 @@
 {
     "bqb":[
-	    {"key":"坏男人","url":"http://qungz.photo.store.qq.com/qun-qungz/5kURNduO*lkHqNy4poNwJw!!/V5bCQA3Mjk5MDE3NzFtLT5gSwPTIw!!/800?w5=842&h5=761&rf=viewer_421"},
-	    {"key":"他可不是乱亲","url":"http://qungz.photo.store.qq.com/qun-qungz/V50zv7hg0Xdi0s0YbizX09AXkc06oesd/V5bCQA3Mjk5MDE3NzFDr8lfOWwSCA!!/800?w5=746&h5=918&rf=viewer_421"},
-	    {"key":"不讨论0了","url":"http://qungz.photo.store.qq.com/qun-qungz/V50zv7hg0Xdi0s0YbizX09AXkc06oesd/V5bCQA3Mjk5MDE3NzE.r8lfD7sfCA!!/800?w5=1025&h5=314&rf=viewer_421"},
-	    {"key":"发图不叫我","url":"http://qungz.photo.store.qq.com/qun-qungz/V50zv7hg0Xdi0s0YbizX09AXkc06oesd/V5bCQA3Mjk5MDE3NzEIooNfTvb2DA!!/800?w5=631&h5=246&rf=viewer_421"},
-        {"key":"xp真怪","url":"http://qungz.photo.store.qq.com/qun-qungz/V50zv7hg0Xdi0s0YbizX09AXkc06oesd/V5bCQA3Mjk5MDE3NzHcl3RfYEQ*Ig!!/800?w5=670&h5=255&rf=viewer_421"},
-        {"key":"太gay了","url":"http://gchat.qpic.cn/gchatpic_new/1304382574/729901771-2956788449-D141E35812943E7FDF5ADF8FAE38CF1A/0?term=3"},
-        {"key":"help","url":"http://gchat.qpic.cn/gchatpic_new/1364374624/729901771-2337018866-B4D2FCE6C786D9B835CF6247E4D21F1F/0?term=3"},
-        {"key":"没有空","url":"http://c2cpicdw.qpic.cn/offpic_new/1364374624//1364374624-1258185875-FCBD98D6B38EC39076A096118CC27E01/0?term=3"},
-        {"key":"杠就没","url":"http://gchat.qpic.cn/gchatpic_new/1364374624/984401519-3059106900-1697DE82974CE159D602D2A29C4437E4/0?term=3"},
-        {"key":"纯洁","url":"http://gchat.qpic.cn/gchatpic_new/1364374624/729901771-2853344969-EBC8857A0D6E37E30BBC6DABEAF8D944/0?term=3"},
-        {"key":"太色了","url":"http://c2cpicdw.qpic.cn/offpic_new/1364374624//1364374624-972871908-DC4824FB910D9FDACAEB548C0E60C0C2/0?term=2"},
-        {"key":"谁顶得住","url":"http://c2cpicdw.qpic.cn/offpic_new/1364374624//1364374624-4262269793-EF04FB77CE092893A3E88D4AD654C78E/0?term=2"},
-        {"key":"女人缘","url":"http://gchat.qpic.cn/gchatpic_new/1301953935/729901771-2684736536-BFDF9EEA592ADED67E8C3F2D4560FD8F/0?term=255"}
+        {
+            "key":"坏男人",
+            "url":"http://qungz.photo.store.qq.com/qun-qungz/5kURNduO*lkHqNy4poNwJw!!/V5bCQA3Mjk5MDE3NzFtLT5gSwPTIw!!/800?w5=842&h5=761&rf=viewer_421"
+        },
+        {
+            "key":"他可不是乱亲",
+            "url":"http://qungz.photo.store.qq.com/qun-qungz/V50zv7hg0Xdi0s0YbizX09AXkc06oesd/V5bCQA3Mjk5MDE3NzFDr8lfOWwSCA!!/800?w5=746&h5=918&rf=viewer_421"
+        },
+        {
+            "key":"不讨论0了",
+            "url":"http://qungz.photo.store.qq.com/qun-qungz/V50zv7hg0Xdi0s0YbizX09AXkc06oesd/V5bCQA3Mjk5MDE3NzE.r8lfD7sfCA!!/800?w5=1025&h5=314&rf=viewer_421"
+        },
+        {
+            "key":"发图不叫我",
+            "url":"http://qungz.photo.store.qq.com/qun-qungz/V50zv7hg0Xdi0s0YbizX09AXkc06oesd/V5bCQA3Mjk5MDE3NzEIooNfTvb2DA!!/800?w5=631&h5=246&rf=viewer_421"
+        },
+        {
+            "key":"xp真怪",
+            "url":"http://qungz.photo.store.qq.com/qun-qungz/V50zv7hg0Xdi0s0YbizX09AXkc06oesd/V5bCQA3Mjk5MDE3NzHcl3RfYEQ*Ig!!/800?w5=670&h5=255&rf=viewer_421"
+        },
+        {
+            "key":"太gay了",
+            "url":"http://gchat.qpic.cn/gchatpic_new/1304382574/729901771-2956788449-D141E35812943E7FDF5ADF8FAE38CF1A/0?term=3"
+        },
+        {
+            "key":"help",
+            "url":"http://gchat.qpic.cn/gchatpic_new/1364374624/729901771-2337018866-B4D2FCE6C786D9B835CF6247E4D21F1F/0?term=3"
+        },
+        {
+            "key":"没有空",
+            "url":"http://c2cpicdw.qpic.cn/offpic_new/1364374624//1364374624-1258185875-FCBD98D6B38EC39076A096118CC27E01/0?term=3"
+        },
+        {
+            "key":"杠就没",
+            "url":"http://gchat.qpic.cn/gchatpic_new/1364374624/984401519-3059106900-1697DE82974CE159D602D2A29C4437E4/0?term=3"
+        },
+        {
+            "key":"纯洁",
+            "url":"http://gchat.qpic.cn/gchatpic_new/1364374624/729901771-2853344969-EBC8857A0D6E37E30BBC6DABEAF8D944/0?term=3"
+        },
+        {
+            "key":"太色了",
+            "url":"http://c2cpicdw.qpic.cn/offpic_new/1364374624//1364374624-972871908-DC4824FB910D9FDACAEB548C0E60C0C2/0?term=2"
+        },
+        {
+            "key":"谁顶得住",
+            "url":"http://c2cpicdw.qpic.cn/offpic_new/1364374624//1364374624-4262269793-EF04FB77CE092893A3E88D4AD654C78E/0?term=2"
+        },
+        {
+            "key":"女人缘",
+            "url":"http://gchat.qpic.cn/gchatpic_new/1301953935/729901771-2684736536-BFDF9EEA592ADED67E8C3F2D4560FD8F/0?term=255"
+        }
     ],
     "BDwords":[
         "有人不付卦金，跑了。[CQ:image,file=18b778929f46eb43a659dc713f287498.image]",
         "@红红红红红莉栖  去舔,不舔不是粉丝",
-        "pic1:[CQ:image,file=ec2a7d67dd51810ed06e18c9e6e667ae.image]",
-        "pic2:[CQ:image,file=http://qungz.photo.store.qq.com/qun-qungz/V52gzTxH0mMXqM2Vefka3rW8Vl1u55Vp/V5bCQA5OTEyNTk3OTkgd61eaHvAHw!!/800?w5=1151&h5=243&rf=viewer_421]",
-        "pic3:[CQ:image,file=http://qungz.photo.store.qq.com/qun-qungz/V52gzTxH0mMXqM2Vefka3rW8Vl1u55Vp/V5bCQA5OTEyNTk3OTkR9Kxe9umCOg!!/800?w5=812&h5=238&rf=viewer_421]",
         "最后，大家都为了掠夺物质而杀人",
         "正义为何有两种。一是正义是无情无义的，二是正义是有人伦私欲的。两者并重才是正义的所在。(所以切嗣是正义的一半，他没第二条)",
         "[CQ:image,file=7b683f5d25ef7843ef04fc728307e4ae.image] 四季运行符合多数生灵，生灵共存符合世界之美",
@@ -69,14 +105,14 @@
         "眼睛为什么能看到远，因为用铅，铅能聚光，现在镜子就是故能对着物体燃烧。人近视后眼睛的光是散光。其实古人早就研究透了，他们玩法更吊",
         "人的思考方式有两种，1趋吉避凶=脑，2感性感觉行动=心，如果说用脑能解决一切的话，其实只能一半。",
         "姻缘分为有，假设是女的，有男朋友，有没男朋友的，有可能玩暧昧的。",
-        "大数据只能用在死物，活物超出范围。比如做个螺丝，都是定死的。\n可能有人会说大数据要是那么简单，那还会有年薪上百万的工程师？\n真是笨蛋啊，因为人对未来的恐惧啊",
+        "大数据只能用在死物，活物超出范围。比如做个螺丝，都是定死的。\n可能有人会说大数据要是那么简单， 那还会有年薪上百万的工程师？\n真是笨蛋啊， 因为人对未来的恐惧啊 ",
         "一个9个字，前面4后面5，上震下巽，后面算算就行了。这种方法比二分法快多了。[CQ:image,file=7b683f5d25ef7843ef04fc728307e4ae.image]",
         "有些钱我是不收的，一般我不收钱的情况下就代表客户悲剧了。之前师妹算一个不收钱，把客户吓尿了。。舔着给（钱）",
         "琉华子为什么是男的，因为他是剖腹的，没在准确时间生下来，故是男的。记得一个传闻，同一天同一个时辰生下来的都是男的。",
         "苹果的图标是银白色为兑卦，主杀伐，那么苹果对敌人是凶猛的",
         "上次用爆点怒草小牛(贴吧牛老师),把他搞疯了。。贴吧直接禁言我[CQ:image,file=7b683f5d25ef7843ef04fc728307e4ae.image]",
         "我没有绿卡，谁给我绿卡",
-        "前2天有一个人咨询想问何时成为亿万富翁，我一看他就是一个赌博之人，而且还不付挂金。[CQ:image,file=7b683f5d25ef7843ef04fc728307e4ae.image]"
+        "前2天有一个人咨询想问何时成为亿万富翁，我一看他就是一个赌博之人，而且还不付挂金。[CQ:image,file=7b683f5d25ef7843ef04fc728307e4ae.image]",
+        "哼哼哼啊啊啊啊啊啊啊啊啊啊啊"
     ]
-
 }
