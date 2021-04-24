@@ -45,9 +45,9 @@ def IsDel():
     删除上一条添加的语句
     '''
     json_data = get_json()
-    json_data['BDwords'].pop()
+    del_msg = json_data['BDwords'].pop()
     with open("/home/bdg-bot/db.json", "w", encoding="utf8") as fp:
         json.dump(json_data, fp,ensure_ascii=False)
         print
-        return True
+        return del_msg
     return False
