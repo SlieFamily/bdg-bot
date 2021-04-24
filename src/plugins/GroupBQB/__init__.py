@@ -21,4 +21,5 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     key = re.findall("([\S]+).jpg",str(event.get_message()))[0]
     print(key)
     key_image_url = await get_image(key)
-    await group_bqb.finish(MessageSegment.image(key_image_url))
+    if key_image_url:
+        await group_bqb.finish(MessageSegment.image(key_image_url))
