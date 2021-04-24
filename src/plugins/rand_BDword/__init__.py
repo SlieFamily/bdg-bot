@@ -15,7 +15,7 @@ plugin_config = Config(**global_config.dict())
 
 # 响应命令
 BDwords = on_command("BDwords", aliases=set(['*/爆点语录','*/BD语录','*/bd语录']), priority=2)
-Addwords = on_regex("\*/add (\w+) \*/end")
+Addwords = on_regex("\*/add ([\s\S]+) \*/end")
 
 @BDwords.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
@@ -25,10 +25,10 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
 
 @Addwords.handle()
 async def handle_first_receive(bot: Bot,event: Event, state: T_State):
-    words = re.findall("\*/add (\w+) \*/end",str(event.get_message()))
+    words = re.findall("\*/add ([\s\S]+) \*/end",str(event.get_message()))
     if IsAdded(words):
-        await Addwords.finish("语录追加成功！爆点世界重构中~")
+        await Addwords.finish(Message("语录追加成功！爆点世界重构中~"))
     else:
-        await Addwords.finish("语录追加失败了，吖屎啦！")
+        await Addwords.finish(Message("语录追加失败了，吖屎啦！"))
 
 
