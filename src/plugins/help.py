@@ -23,8 +23,7 @@ async def get_keys():
     return None
 
 help_msg = """欢迎使用爆点Robot！
-本机器人拥有的功能全是给主人用的，才不会响应你的命令呢，哼~
-那么，我的功能有：
+本机器人拥有的功能有：
 ----------
 1.爆点语录
 2.美图发送
@@ -32,8 +31,8 @@ help_msg = """欢迎使用爆点Robot！
 4.网易云点歌（检修中）
 5.考研倒计时（检修中）
 6.群表情包
-可以通过“*/keys”命令，查看详情
-----------"""
+----------
+你可以通过*/keys命令，查看详情"""
 helper = on_command("*/help", aliases=set(['*/help','*/帮助']), priority=2)
 
 @helper.handle()
@@ -42,7 +41,7 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     if args:
         state["queshi"] = args
 
-@helper.got("queshi", prompt="help列表会很刷屏，你确实想看？\n(回复：确实)")
+@helper.got("queshi", prompt="help列表会很刷屏，你确定你想看？\n(回复：确实)")
 async def handle_second_recevie(bot: Bot, event: Event, state: T_State):
     if state["queshi"] != "确实":
         await helper.reject("无效命令，吖屎啦")
