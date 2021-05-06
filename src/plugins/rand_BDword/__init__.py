@@ -15,7 +15,7 @@ plugin_config = Config(**global_config.dict())
 
 # 响应命令
 BDwords = on_command("BDwords", aliases=set(['*/爆点语录','*/BD语录','*/bd语录']), priority=2)
-Addwords = on_regex("\*/add\n([\s\S]*)\n\*/end")
+Addwords = on_regex("\+%([\s\S]+)%")
 Delwords = on_command("*/del",priority=2)
 welcom = on_notice()
 
@@ -27,7 +27,7 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
 
 @Addwords.handle()
 async def handle_first_receive(bot: Bot,event: Event, state: T_State):
-    words = re.findall("\*/add\n([\s\S]*)\n\*/end",str(event.get_message()))
+    words = re.findall("\+%([\s\S]*)%",str(event.get_message()))
     if IsAdded(words):
         await Addwords.finish(Message("语录追加成功，爆点世界重构中……"))
     else:
@@ -35,6 +35,8 @@ async def handle_first_receive(bot: Bot,event: Event, state: T_State):
 
 @Delwords.handle()
 async def handle_first_receive(bot: Bot,event: Event, state: T_State):
+    if event.get_user_id != 1364374624:
+        await Delwords.finish(Message("你就是逊啊，没权限"))
     del_msg = IsDel()
     if del_msg:
         await Delwords.finish(Message("已将语录：\n-------\n"+del_msg+"\n-------\n删除！"))
@@ -45,5 +47,6 @@ async def handle_first_receive(bot: Bot,event: Event, state: T_State):
 async def handle_first_receive(bot: Bot,event: GroupIncreaseNoticeEvent, state: T_State):
     user = event.get_user_id()
     at_ = "[CQ:at,qq={}]".format(user)
-    msg = at_+'新人，想学爆点吗？'
+    # msg = at_+'新人，想学爆点吗？'
+    msg = at_+'欢迎新人进裙'
     await welcom.finish(Message(msg))
