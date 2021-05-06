@@ -14,9 +14,9 @@ global_config = nonebot.get_driver().config
 plugin_config = Config(**global_config.dict())
 
 # 响应命令
-BDwords = on_command("BDwords", aliases=set(['*/爆点语录','*/BD语录','*/bd语录']), priority=2)
+BDwords = on_command("BDwords", aliases=set(['爆点语录','BD语录','bd语录']), priority=2)
 Addwords = on_regex("\+%([\s\S]+)%")
-Delwords = on_command("*/del",priority=2)
+Delwords = on_command("-del",priority=2)
 welcom = on_notice()
 
 @BDwords.handle()
