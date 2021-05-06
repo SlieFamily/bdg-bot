@@ -35,7 +35,7 @@ async def handle_first_receive(bot: Bot,event: Event, state: T_State):
 
 @Delwords.handle()
 async def handle_first_receive(bot: Bot,event: Event, state: T_State):
-    if event.get_user_id != 1364374624:
+    if event.get_user_id() != "1364374624":
         await Delwords.finish(Message("你就是逊啊，没权限"))
     del_msg = IsDel()
     if del_msg:
