@@ -18,7 +18,7 @@ BDwords = on_command("BDwords", aliases=set(['爆点语录','BD语录','bd语录
 Addwords = on_regex("\+%([\s\S]+)%")
 Delwords = on_command("-del",priority=2)
 welcom = on_notice()
-suanle = on_regex("算了")
+suanle = on_regex("算了|bdg|爆点哥|BDG")
 
 @BDwords.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
