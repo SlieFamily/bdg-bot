@@ -18,6 +18,7 @@ BDwords = on_command("BDwords", aliases=set(['爆点语录','BD语录','bd语录
 Addwords = on_regex("\+%([\s\S]+)%")
 Delwords = on_command("-del",priority=2)
 welcom = on_notice()
+suanle = on_regex("算了")
 
 @BDwords.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
@@ -50,3 +51,7 @@ async def handle_first_receive(bot: Bot,event: GroupIncreaseNoticeEvent, state: 
     # msg = at_+'新人，想学爆点吗？'
     msg = at_+'欢迎新人进裙'
     await welcom.finish(Message(msg))
+
+@suanle.handle()
+async def handle_first_receive(bot: Bot,event: Event, state: T_State):
+    await suanle.finish(Message("要算卦了？"))
