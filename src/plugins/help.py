@@ -32,8 +32,10 @@ help_msg = """欢迎使用爆点Robot！
 5.考研倒计时（检修中）
 6.群表情包
 ----------
-你可以通过*/keys命令，查看详情"""
-helper = on_command("*/help", aliases=set(['*/help','*/帮助']), priority=2)
+你可以通过list命令，查看详情"""
+
+helper = on_command("help", aliases=set(['帮助']), priority=2)
+lister = on_command("list", priority=2)
 
 @helper.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
@@ -47,12 +49,10 @@ async def handle_second_recevie(bot: Bot, event: Event, state: T_State):
         await helper.reject("无效命令，吖屎啦")
     await helper.send(Message(help_msg))
 
-@helper.got("keyCom")
+@lister.handle()
 async def keyLook(bot: Bot, event: Event, state: T_State):
-    if state["keyCom"] != "*/keys":
-        await helper.reject("无效命令，吖屎啦")
     keyList = await get_keys()
-    msg_ = "可以用关键词.jpg触发图片发送，关键词列表如下：\n"
+    msg_ = "可以用[关键词.jpg]触发图片发送，关键词列表如下：\n"
     for i in range(0,len(keyList)):
         msg_ += f"{i+1}. {keyList[i]}\n"
     await helper.send(Message(msg_))
