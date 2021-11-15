@@ -1,5 +1,7 @@
 # 爆点机器人|bdg-bot
 
+## 注意：本项目因技术落后已不再更新，整体功能已重构合并到新项目[绘梨花Bot](https://github.com/SlieFamily/ErikaBot)
+
 ## 快速开始
 
 1. 参考`go-cqhttp`项目文档，提前配置好反向ws客户端
